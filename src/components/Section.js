@@ -2,10 +2,13 @@ import { useState } from "react";
 
 const Section = (props) => {
   const { title, description } = props.item;
-  const [isVisible, setIsVisible] = useState(true);
+  const { isVisible, setShowIndex } = props;
+  //const [isVisible, setIsVisible] = useState(true);
 
+  console.log(setShowIndex);
   const handleClick = () => {
-    setIsVisible(!isVisible);
+    // setIsVisible(!isVisible);
+    setShowIndex();
   };
 
   return (
